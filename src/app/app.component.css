@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  height: 90vh;
+  margin: auto;
+}
+
+.container main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.container main form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container main section {
+  display: flex;
+  flex-direction: column;
+}
+
+.container main section label {
+  margin: 1rem 0 .4rem 0;
+  font-weight: bold;
+}
+
+.container main section textarea {
+  resize: vertical;
+}
+
+input:read-only {
+  color: red;
+}
