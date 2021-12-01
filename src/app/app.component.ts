@@ -16,6 +16,14 @@ import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
           <input (change)="regex()" formControlName="numbers" type="checkbox" id="numbers">
           Get numbers
         </label>
+        <label for="lowercase">
+          <input (change)="regex()" formControlName="lowercase" type="checkbox" id="lowercase">
+          Get lower
+        </label>
+        <label for="uppercase">
+          <input (change)="regex()" formControlName="uppercase" type="checkbox" id="uppercase">
+          Get upper
+        </label>
 
         <section formGroupName="inputs">
           <label for="reponse">Test text goes here</label>
@@ -38,6 +46,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       numbers: [false],
+      lowercase: [false],
+      uppercase: [false],
       inputs: this.fb.group({
         testText: [' auhduhs 123123'],
         matchedString: ['']
@@ -50,11 +60,18 @@ export class AppComponent implements OnInit {
 
     Object.keys(this.form.controls).forEach(key => {
       if (key !== 'inputs') {
+        this.matchString = '';
         // apply regex to numbers
         if (this.form.get('numbers')?.value === true) {
-          this.matchString = testText.value.match(/[0-9]/gm)?.join('');
-        } else {
-          this.form.get('inputs.matchedString')?.patchValue('');
+          this.matchString += testText.value.match(/[0-9]/gm)?.join('') ?? '';
+        }        
+        
+        if (this.form.get('lowercase')?.value === true) {
+          this.matchString += testText.value.match(/[a-z]/gm)?.join('') ?? '';
+        }
+
+        if (this.form.get('uppercase')?.value === true) {
+          this.matchString += testText.value.match(/[A-Z]/gm)?.join('') ?? '';
         }
       }
     });
