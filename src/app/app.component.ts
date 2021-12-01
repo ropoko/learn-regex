@@ -4,11 +4,10 @@ import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-root',
   template: `
+  <body>
   <div class="container">
     <header>
-      <h1>
-        Hello world!
-      </h1>
+     <h1>Learn Regex</h1>
     </header>
     <main>
       <form [formGroup]="form">
@@ -33,6 +32,7 @@ import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
       </form>
     </main>
   </div>
+  </body>
   `,
   styleUrls: ['app.component.css']
 })
