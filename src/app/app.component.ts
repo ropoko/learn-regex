@@ -3,37 +3,7 @@ import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  template: `
-  <body>
-  <div class="container">
-    <header>
-     <h1>Learn Regex</h1>
-    </header>
-    <main>
-      <form [formGroup]="form">
-        <label for="numbers">
-          <input (change)="regex()" formControlName="numbers" type="checkbox" id="numbers">
-          Get numbers
-        </label>
-        <label for="lowercase">
-          <input (change)="regex()" formControlName="lowercase" type="checkbox" id="lowercase">
-          Get lower
-        </label>
-        <label for="uppercase">
-          <input (change)="regex()" formControlName="uppercase" type="checkbox" id="uppercase">
-          Get upper
-        </label>
-
-        <section formGroupName="inputs">
-          <label for="testText">Text: </label>
-          <textarea (keydown)="regex()" (focus)="regex()" formControlName="testText" id="testText" cols="45" rows="10"></textarea>
-          <input formControlName="matchedString" class="matchText" value="{{matchString}}" readonly />
-        </section>
-      </form>
-    </main>
-  </div>
-  </body>
-  `,
+  templateUrl: 'app.component.html',
   styleUrls: ['app.component.css']
 })
 
