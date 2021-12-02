@@ -33,3 +33,7 @@
   border: 2px solid brown;
   outline: 0;
 }
+
+#output {
+  padding: 2%;
+}
