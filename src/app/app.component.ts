@@ -51,7 +51,6 @@ export class AppComponent implements OnInit {
   selectAll(): void {
     const value = this.form.get('all')?.value ?? false
     Object.keys(this.form.controls).forEach(key => {
-      console.log(key)
       this.form.get(key)?.patchValue(value);
     });
 
