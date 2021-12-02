@@ -24,9 +24,17 @@
 
                 <section formGroupName="inputs">
                     <label for="testText">Text: </label>
-                    <textarea (keydown)="regex()" (focus)="regex()" formControlName="testText" id="testText" cols="45"
-                        rows="10"></textarea>
-                    <input formControlName="matchedString" class="matchText" value="{{matchString}}" readonly />
+                    <textarea 
+                        (keydown)="regex()" 
+                        (focus)="regex()" 
+                        formControlName="testText" 
+                        id="testText" 
+                        cols="45"
+                        rows="10">
+                    </textarea>
+
+                    <label for="output">Output: </label>
+                    <input id="output" formControlName="matchedString" class="matchText" value="{{matchString}}" readonly />
                 </section>
             </form>
         </main>
