@@ -1,29 +1,34 @@
 <body>
     <div class="container">
         <header>
-        <h1>Learn Regex</h1>
+            <h1>Learn Regex</h1>
         </header>
         <main>
-        <form [formGroup]="form">
-            <label for="numbers">
-            <input (change)="regex()" formControlName="numbers" type="checkbox" id="numbers">
-            Get numbers
-            </label>
-            <label for="lowercase">
-            <input (change)="regex()" formControlName="lowercase" type="checkbox" id="lowercase">
-            Get lower
-            </label>
-            <label for="uppercase">
-            <input (change)="regex()" formControlName="uppercase" type="checkbox" id="uppercase">
-            Get upper
-            </label>
+            <form [formGroup]="form">
+                <label for="all">
+                    <input (change)="selectAll()" formControlName="all" type="checkbox" id="all">
+                    Select all
+                </label> 
+                <label for="numbers">
+                    <input (change)="regex()" formControlName="numbers" type="checkbox" id="numbers">
+                    Get numbers
+                </label>
+                <label for="lowercase">
+                    <input (change)="regex()" formControlName="lowercase" type="checkbox" id="lowercase">
+                    Get lower
+                </label>
+                <label for="uppercase">
+                    <input (change)="regex()" formControlName="uppercase" type="checkbox" id="uppercase">
+                    Get upper
+                </label>
 
-            <section formGroupName="inputs">
-            <label for="testText">Text: </label>
-            <textarea (keydown)="regex()" (focus)="regex()" formControlName="testText" id="testText" cols="45" rows="10"></textarea>
-            <input formControlName="matchedString" class="matchText" value="{{matchString}}" readonly />
-            </section>
-        </form>
+                <section formGroupName="inputs">
+                    <label for="testText">Text: </label>
+                    <textarea (keydown)="regex()" (focus)="regex()" formControlName="testText" id="testText" cols="45"
+                        rows="10"></textarea>
+                    <input formControlName="matchedString" class="matchText" value="{{matchString}}" readonly />
+                </section>
+            </form>
         </main>
     </div>
 </body>
