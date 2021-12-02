@@ -25,8 +25,8 @@ import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
         </label>
 
         <section formGroupName="inputs">
-          <label for="reponse">Test text goes here</label>
-          <textarea (keydown)="regex()" (focus)="regex()" formControlName="testText" id="response" cols="45" rows="10"></textarea>
+          <label for="testText">Text: </label>
+          <textarea (keydown)="regex()" (focus)="regex()" formControlName="testText" id="testText" cols="45" rows="10"></textarea>
           <input formControlName="matchedString" class="matchText" value="{{matchString}}" readonly />
         </section>
       </form>

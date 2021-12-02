@@ -1,9 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+
+body {
   font-family: 'MedievalSharp', cursive;
-  font-weight: bold;
+  font-size: 1.1em;
+  background: no-repeat center/cover url(assets/background.png);
 }

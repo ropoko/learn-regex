@@ -1,65 +1,35 @@
-body {
-  background-image: url(../assets/image-background.png);
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-}
-
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: transparent;
-  border-radius: 10px;
-  margin: 0 auto;
-  width: 50%;
-  height: 90vh;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
 }
 
 .container h1 {
-  margin-top: 100px;
   font-size: 3rem;
-  color: red;
-}
-
-.container main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: auto;
 }
 
 .container main form, .container main section {
   display: flex;
   flex-direction: column;
-}
-
-.container main form label {
-  margin-top: 8px;
+  margin: 1rem 0 1rem 0;
 }
 
 .container main section label {
   margin: 1rem 0 .4rem 0;
 }
 
-.container main section textarea {
+.container main section textarea, .matchText {
   resize: vertical;
   background-color: transparent;
-  
-}
+  border-radius: 0.3rem;
 
-.container main section textarea, .matchText {
-  border-radius: 10px;
-  padding: 8px;
-  border: 5px solid red;
-}
+  max-height: 275px;
 
-.matchText {
-  margin-top: 8px;
-  background-color: transparent;
-}
-
-input:read-only {
-  color: red;
+  margin: 0.5rem 0;
+  border: 2px solid brown;
+  outline: 0;
 }
