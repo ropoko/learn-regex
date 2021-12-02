@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
       lowercase: [false],
       uppercase: [false],
       inputs: this.fb.group({
-        testText: [' auhduhs 123123'],
+        testText: [' batatinha Frita 123...'],
         matchedString: ['']
       })
     });
